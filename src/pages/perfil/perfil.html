@@ -1,0 +1,28 @@
+
+<!--
+  <ion-header>
+
+    <ion-navbar>
+      <ion-title *ngIf="!model">Perfil</ion-title>
+      <ion-title *ngIf="model"><h2>{{model.first_name}}  {{model.last_name}}</h2></ion-title>
+    </ion-navbar>
+
+  </ion-header>
+-->
+
+<ion-navbar>
+    <ion-title *ngIf="!model">Perfil</ion-title>
+    <ion-title *ngIf="model"><h2>{{model.first_name}}  {{model.last_name}}</h2></ion-title>
+</ion-navbar>
+
+<ion-content padding>   
+
+        
+          <div class="div-galery-img">           
+            <img src={{model.avatar}} #myImage (click)="presentImage(myImage)" class="galery-img"/>
+          </div>   
+          <h1>{{model.id}}</h1>
+          <h2>{{model.first_name}}  {{model.last_name}}</h2>
+       
+
+</ion-content>
